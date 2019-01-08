@@ -40,3 +40,4 @@ process.on("SIGINT", function() {
 	});
 });
 require("../models/smartPhone.model");
+require("../models/userRating.model");
