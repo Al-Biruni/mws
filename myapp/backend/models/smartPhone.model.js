@@ -9,19 +9,22 @@ var phoneSchema = mongoose.Schema({
   },
 userRating:{
 type : userRating,
-require: true
 },
-///////////Importan details 
-
+///////////Importan details
+name:{
+	type:String,
+	require:true,
+	trim:true
+},
 screenSize:{
-	type : String,
-	require: true,
+	type : Number,
+
 	trim: true
 
 },
 storage:{
 type : String,
-require: true,
+
 trim: true
 },
 camera:{
@@ -30,18 +33,18 @@ require: false,
 trim: true
 },
 battery:{
-type : String,
-require: true,
+type : Number,
+
 trim: true
 },
 proc:{
 	type: String,
-	require: true,
+
 	trim : true
 },
 ram:{
 type : String,
-require: true,
+
 trim: true
 },
 tradeMark:{
@@ -51,27 +54,27 @@ tradeMark:{
 },
 operatingSystem:{
 type : String,
-require: true,
+
 trim: true
 },
 sim:{
 type : String,
-require: true,
+
 trim: true
 },
 relaseDate:{
 type : Date ,
-require: true,
+
 trim : true
 },
 userInterface:{
 type : String,
-require: true,
+
 trim : true
 },
 network:{
 type : String,
-require: true,
+
 trim : true
 },
 
@@ -125,7 +128,7 @@ weight:{
 	require:true
 },
 dim:[{
-	
+
 		length:{
 	type:Number,
 	require:true
@@ -134,7 +137,7 @@ dim:[{
         	type:Number,
         	require:true
         }
-	
+
 
 }],
 thickness:{
@@ -154,7 +157,7 @@ screenType:{
 	type:String
 },
 screenDim:[{
-	
+
 		length:{
 	type:Number,
 	require:true
@@ -163,8 +166,8 @@ screenDim:[{
         	type:Number,
         	require:true
         }
-	
-	
+
+
 }],
 screenThickness:{
 	type:Number,

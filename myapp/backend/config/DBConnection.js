@@ -3,12 +3,18 @@ var mongoose = require('mongoose');
 var MongoClient = require('mongodb').MongoClient;
 
 
-MongoClient.connect('mongodb://127.0.0.1:27017',{ useNewUrlParser: true },function(err,db){
+MongoClient.connect('mongodb://127.0.0.1:27017/mobily',{ useNewUrlParser: true },function(err,db){
 
 	if(err)
 		throw err;
 
-	console.log("Conected to db")
+	console.log("Conected to db");
+	var dbo = db.db("mobily")
+var myobj = {name:"Honor 8x",picture:"honor8x.jpg"}
+	dbo.collection("SmartPhone").insertOne(myobj,function(err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
+	});
 });
 // CAPTURE APP TERMINATION / RESTART EVENTS
 // To be called when process is restarted or terminated

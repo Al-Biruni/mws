@@ -1,9 +1,17 @@
 <div *ngIf="phone">
   <h2>{{phone.name | uppercase}} Details</h2>
   <div><span>id: </span>{{phone.id}}</div>
+
+<div id ="imD">
+ <label>{{phone.screenSize}} <span>حجم الشاشة</span></label>
+
+
+</div>
+
+
   <div>
     <label>name:
-    
+
     </label>
   </div>
   <button (click)="goBack()">go back</button>

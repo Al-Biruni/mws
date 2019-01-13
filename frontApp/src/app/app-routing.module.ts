@@ -3,12 +3,17 @@ import { RouterModule,Routes } from '@angular/router';
 import {PhonesComponent  } from './phones/phones.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import {PhoneComponent  } from './phone/phone.component';
+import { CompareComponent } from './compare/compare.component';
+import {AdminComponent } from './admin/admin.component';
 const routes: Routes =[
 
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'phones', component: PhonesComponent},
+  { path: 'phones', component: PhoneComponent},
+    { path: 'compare', component: CompareComponent },
+    {path:'Ah234',component:AdminComponent},
   {path: 'details/:id ' , component :PhoneComponent }
+
   //,{path: 'compare', component compare}
 
 ];

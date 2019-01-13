@@ -12,5 +12,11 @@
     "egypt"
   ],
   "author": "al-biruni",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "karma-chrome-launcher": "^2.2.0"
+  },
+  "dependencies": {
+    "@angular/cli": "^7.1.0"
+  }
 }
