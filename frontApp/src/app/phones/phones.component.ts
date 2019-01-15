@@ -18,7 +18,7 @@ export class PhonesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getPhones;
+    this.getPhones();
   }
 
 }

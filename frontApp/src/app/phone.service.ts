@@ -20,12 +20,12 @@ export class PhoneService {
     const url = `${this.apiUrl}/getPhones`;
     return  this.http.get<Phone[]>(url)
     .pipe(
-       tap(_ => this.log('fetched heroes')),
+       tap(_ => this.log('fetched phones')),
 catchError(this.handleError('getPhones', []))
 );
   }
   getPhone(id: number): Observable<Phone> {
-    const urlId = `${this.apiUrl}/${id}`;
+    const urlId = `${this.apiUrl}/Smartphones/getPhone/${id}`;
     return this.http.get<Phone>(urlId)
     .pipe(
        tap(_ => this.log(`PhoneService: fetched phoneid=${id}`)),
@@ -34,7 +34,7 @@ catchError(this.handleError<Phone>(`getPhone id = ${id}`))
   }
 
   private log(message: string) {
-  this.messageService.add(`HeroService:${message}`);
+  this.messageService.add(`PhoneService:${message}`);
 
 }
 

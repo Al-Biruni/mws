@@ -12,10 +12,10 @@ SmartphonesCtrl.createSmartPhone
 	);
 	router.get('/getphones',
          SmartphonesCtrl.getPhones );
-router.get('/Smartphones/getPhone":phoneId',
+router.get('/Smartphones/getPhone/:phoneId',
 SmartphonesCtrl.getSmartPhone
 	);
-router.delete('/Smartphones/deletePhone":phoneId',
+router.delete('/Smartphones/deletePhone/:phoneId',
 SmartphonesCtrl.deleteSmartPhone
 	);
 

@@ -9,10 +9,9 @@ const routes: Routes =[
 
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'phones', component: PhoneComponent},
+  { path: 'phones', component: PhonesComponent},
     { path: 'compare', component: CompareComponent },
-    {path:'Ah234',component:AdminComponent},
-  {path: 'details/:id ' , component :PhoneComponent }
+    {path:'Ah234',component:AdminComponent}
 
   //,{path: 'compare', component compare}
 
