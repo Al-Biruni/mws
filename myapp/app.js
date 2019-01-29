@@ -1,6 +1,5 @@
 require("./backend/config/DBConnection");
 var express = require('express')
-MongoClient = require("mongodb").MongoClient,
     logger = require("morgan"),
     cors = require("cors"),
     helmet = require("helmet"),
@@ -98,6 +97,10 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
+app.use(function (req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
 
 module.exports = app;

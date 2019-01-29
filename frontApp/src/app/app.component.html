@@ -1,12 +1,19 @@
+<div class="header">
 <h1>{{title}}</h1>
-<h1>{{title}}</h1>
+<div>
 <nav>
   <a routerLink="/dashboard">الرئسية </a>
   <a routerLink="/compare">قارن</a>
-    <a routerLink="/popularComp">اشهر المقرنات </a>
+    <a routerLink="/popularCompare">اشهر المقرنات </a>
       <a routerLink="/phones">اصدارات جديدة </a>
       <a routerLink="/phones">اصدارات قادمة </a>
 </nav>
+<div>
+<div class="body">
 <router-outlet></router-outlet>
+</div>
+
+<div class="footer">
 <app-messages></app-messages>
-<app-messages></app-messages>
+
+</div>

@@ -8,13 +8,16 @@ import {PhoneService } from '../phone.service';
   styleUrls: ['./phones.component.css']
 })
 export class PhonesComponent implements OnInit {
-  phones : Phone[];
+  phones =[];
 
   constructor(private phoneService: PhoneService) { }
 
   getPhones():void{
- this.phoneService.getPhones()
-              .subscribe(phones => this.phones = phones);
+ this.phoneService.getAllPhones()
+              .subscribe(
+                (res:any) => this.phones = res.data
+
+ );
   }
 
   ngOnInit() {

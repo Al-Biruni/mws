@@ -1,6 +1,6 @@
 export class Phone  {
 
-id : number;
+id : string;
 picture : string;
 rating : number;
 name : string;

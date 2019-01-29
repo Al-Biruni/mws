@@ -13,8 +13,10 @@ type : userRating,
 ///////////Importan details
 name:{
 	type:String,
-	require:true,
-	trim:true
+	unique : true,
+	 required : true,
+	 dropDups: true ,
+	 trim:true
 },
 screenSize:{
 	type : Number,
