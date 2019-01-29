@@ -1,0 +1,39 @@
+<form [formGroup] = "compareBox" (ngSubmit) = "comparePhones()">
+  <div>
+    <label >
+
+        <input id="forthPhone" type="search"   formControlName="forthPhone" placeholder="الهاتف الرابع">
+    </label>
+<label >
+
+    <input id="thirdPhone" type="search"  formControlName="thirdPhone" placeholder="الهاتف الثالث">
+</label>
+
+
+<mat-form-field>
+
+    <input matInput  id="secondPhone" type="search" formControlName="secondPhone" [matAutocomplete]="auto" >
+  </mat-form-field>
+
+
+
+<mat-form-field>
+<input  matInput  type="search" formControlName="firstPhone" [matAutocomplete]="auto "#box (keyup)="lookUpPhones(box.value)" >
+</mat-form-field>
+
+
+  <mat-autocomplete #auto="matAutocomplete" >
+  <mat-option *ngFor="let phone of phones " [value]="phone._id" >
+    <img src="assets/images/{{phone.picture}}">
+    <span> {{ phone.name }}</span>
+  </mat-option>
+</mat-autocomplete>
+
+
+
+
+
+
+  </div>
+<button type="submit" [disabled]="!compareBox.valid">قارن</button>
+</form>
